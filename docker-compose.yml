@@ -1,0 +1,23 @@
+version: '3'
+services:
+  apachephp:
+    build:
+      context: ./
+      dockerfile: ApachePhp.DockerFile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /path/of/my/local/filesystem:/path/to/mount/into/containers/filesystem
+  devmysql:
+    build:
+      context: ./
+      dockerfile: MySQLDev.DockerFile
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_ALLOW_EMPTY_PASSWORD : 'yes'
+    restart: always
+    volumes:
+      - /database/path/of/my/local/filesystem:/database/path/to/mount/into/containers/filesystem
