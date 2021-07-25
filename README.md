@@ -10,8 +10,8 @@ can be accessed at `Host/api/products/filter`
 - the Helper `ArrayToXml` contains the function `array_to_xml` that can convert an array to XML format
 
 ### Consuming the API
-the project also have `SWAGGER UI` witch is accessible on `Host/api/documentation` , u can test and consume the api through it
-###Tests
+the project also have `SWAGGER UI` witch is accessible on `Host/api/documentation` , u can test and consume the api through it.
+### Tests
 the Test `JsonFilteringTest` have tests functions for a multiple endpoint's usage cases
 ### Docker
 U can set up the environment to run the project using docker image , all docker details located in `docker-compose.yml` file 
